@@ -77,7 +77,7 @@ public class BroadCastActivity extends AppCompatActivity {
             Log.e("BroadCastActivity", "Error starting AudioRecord: " + e.getMessage());
         }
     }
-    //testing
+
     private void startServerSocket() {
         try {
             String ipAddress = InetAddress.getLocalHost().getHostAddress();
