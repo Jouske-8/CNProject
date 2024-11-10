@@ -34,7 +34,7 @@ public class ListenActivity extends AppCompatActivity {
 
         new Thread(() -> {
             try {
-                Socket socket = new Socket("192.168.137.90", 5000);  // Replace with actual server IP
+                Socket socket = new Socket("192.168.137.183", 5000);  // server IP
                 socket.setSoTimeout(15000);  // Optional, increase timeout
 
                 InputStream inputStream = new BufferedInputStream(socket.getInputStream());

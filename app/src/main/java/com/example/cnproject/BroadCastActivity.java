@@ -67,7 +67,8 @@ public class BroadCastActivity extends AppCompatActivity {
                     int read = audioRecord.read(buffer, 0, buffer.length);
                     if (read > 0) {
                         Log.d("BroadCastActivity", "Captured audio data: " + read + " bytes");
-                        runOnUiThread(() -> listenUpdate.setText("Captured audio data: " + read + " bytes"));
+
+                        runOnUiThread(() -> listenUpdate.setText("Captured audio data: " + read + " bytes\n" + serverSocket.getInetAddress()));
                         runOnUiThread(() -> listenUpdateImg.setImageResource(imageResourse));
                         sendAudioData(buffer, read);  // Send captured audio data
                     }
